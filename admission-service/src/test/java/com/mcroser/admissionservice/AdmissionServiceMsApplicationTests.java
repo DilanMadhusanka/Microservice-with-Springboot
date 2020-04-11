@@ -1,10 +1,10 @@
-package com.microservice.admissionsservice;
+package com.mcroser.admissionservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AdmissionsServiceMsApplicationTests {
+class AdmissionServiceMsApplicationTests {
 
 	@Test
 	void contextLoads() {

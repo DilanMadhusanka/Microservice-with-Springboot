@@ -1,4 +1,4 @@
-package com.microservice.admissionsserviceres.models;
+package com.mcroser.admissionservice.resources.models;
 
 public class Patient {
 

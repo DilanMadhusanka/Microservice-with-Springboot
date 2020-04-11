@@ -1,13 +1,13 @@
-package com.microservice.admissionsservice;
+package com.mcroser.admissionservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AdmissionsServiceMsApplication {
+public class AdmissionServiceMsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AdmissionsServiceMsApplication.class, args);
+		SpringApplication.run(AdmissionServiceMsApplication.class, args);
 	}
 
 }

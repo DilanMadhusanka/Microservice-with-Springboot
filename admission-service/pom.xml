@@ -8,11 +8,11 @@
 		<version>2.2.6.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.microservice</groupId>
-	<artifactId>admissions-service</artifactId>
+	<groupId>com.mcroser</groupId>
+	<artifactId>admission-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>admissions-service-ms</name>
-	<description>Admissions Service</description>
+	<name>admission-service-ms</name>
+	<description>Admission Service</description>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -24,6 +24,12 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
