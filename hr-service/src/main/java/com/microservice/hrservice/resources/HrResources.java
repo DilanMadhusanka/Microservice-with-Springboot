@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.microservice.hrservice.models.Employee;
+import com.microservice.hrservice.models.EmployeesList;
 
 @RestController
 @RequestMapping("/hr")
@@ -17,8 +18,10 @@ public class HrResources {
 			new Employee("E2", "Lila", "Hardcastle", "Surgery"), new Employee("E3", "Solace", "Chucks", "Dentistry"));
 
 	@RequestMapping("/employees")
-	public List<Employee> getEmployees() {
-		return employees;
+	public EmployeesList getEmployees() {
+		EmployeesList employeesList = new EmployeesList();
+		employeesList.setEmployees(employees);
+		return employeesList;
 	}
 
 	@RequestMapping("/employees/{id}")
