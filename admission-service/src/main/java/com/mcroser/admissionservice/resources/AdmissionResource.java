@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import com.mcroser.admissionservice.resources.models.EmployeesList;
 import com.mcroser.admissionservice.resources.models.Patient;
 
 @RestController
@@ -22,8 +23,10 @@ public class AdmissionResource {
 	List<Patient> patients = Arrays.asList(new Patient("P1", "Rajapaksha", "SriLanka"),
 			new Patient("P2", "Jack", "America"), new Patient("P3", "Tom", "England"));
 	
-	public EmployeeList getPhysicians() {
-		EmployeeList employeesList = restTemplate.getForEntity("http://localhost/hr/employees", EmployeeList.class);
+	@RequestMapping("/physicians")
+	public EmployeesList getPhysicians() {
+		ResponseEntity<EmployeesList> employeesList = restTemplate.getForEntity("http://localhost:8082/hr/employees", EmployeesList.class);
+		return employeesList.getBody();
 	}
 
 	@RequestMapping("/patients")
