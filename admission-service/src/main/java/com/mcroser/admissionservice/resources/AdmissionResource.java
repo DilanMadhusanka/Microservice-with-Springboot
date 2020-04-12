@@ -26,13 +26,13 @@ public class AdmissionResource {
 	
 	@RequestMapping("/physicians")
 	public EmployeesList getPhysicians() {
-		ResponseEntity<EmployeesList> employeesList = restTemplate.getForEntity("http://localhost:8082/hr/employees", EmployeesList.class);
+		ResponseEntity<EmployeesList> employeesList = restTemplate.getForEntity("http://hr-service/hr/employees", EmployeesList.class);
 		return employeesList.getBody();
 	}
 	
 	@RequestMapping("/diseases")
 	public DiseasesList getDiseases() {
-		ResponseEntity<DiseasesList> diseasesList = restTemplate.getForEntity("http://localhost:8083/pathology/diseases", DiseasesList.class);
+		ResponseEntity<DiseasesList> diseasesList = restTemplate.getForEntity("http://pathology-service/pathology/diseases", DiseasesList.class);
 		return diseasesList.getBody();
 	}
 
