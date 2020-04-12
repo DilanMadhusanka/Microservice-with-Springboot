@@ -1,4 +1,4 @@
-package com.microservice.pathologyservice.models;
+package com.mcroser.admissionservice.resources.models;
 
 import java.util.List;
 

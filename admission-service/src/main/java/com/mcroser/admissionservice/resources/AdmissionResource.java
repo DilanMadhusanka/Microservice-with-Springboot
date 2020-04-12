@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import com.mcroser.admissionservice.resources.models.DiseasesList;
 import com.mcroser.admissionservice.resources.models.EmployeesList;
 import com.mcroser.admissionservice.resources.models.Patient;
 
@@ -27,6 +28,12 @@ public class AdmissionResource {
 	public EmployeesList getPhysicians() {
 		ResponseEntity<EmployeesList> employeesList = restTemplate.getForEntity("http://localhost:8082/hr/employees", EmployeesList.class);
 		return employeesList.getBody();
+	}
+	
+	@RequestMapping("/diseases")
+	public DiseasesList getDiseases() {
+		ResponseEntity<DiseasesList> diseasesList = restTemplate.getForEntity("http://localhost:8083/pathology/diseases", DiseasesList.class);
+		return diseasesList.getBody();
 	}
 
 	@RequestMapping("/patients")
